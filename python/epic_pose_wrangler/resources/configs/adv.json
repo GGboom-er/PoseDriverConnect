@@ -1,0 +1,25 @@
+{
+  "retargeting": {
+    "transform_mapping": {},
+    "import": {
+      "source": 1,
+      "target": 0
+    },
+    "export": {
+      "source": 0,
+      "target": 1
+    }
+  },
+  "mirror_mapping": {
+    "solver_expression": "(?P<prefix>[a-zA-Z0-9]+)?(?P<side>_[LR]{1}_)(?P<suffix>[a-zA-Z0-9_]+)",
+    "transform_expression": "(?P<prefix>[a-zA-Z0-9_]+)?(?P<side>_[LR]{1})",
+    "left": {
+      "solver_syntax": "_L_",
+      "transform_syntax": "_L"
+    },
+    "right": {
+      "solver_syntax": "_R_",
+      "transform_syntax": "_R"
+    }
+  }
+}

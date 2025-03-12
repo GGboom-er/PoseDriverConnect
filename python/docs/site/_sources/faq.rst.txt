@@ -1,0 +1,5 @@
+FAQ
+========================================
+
+- Where are the settings stored?
+    - *Inside your local app data folder (%LOCALAPPDATA%) under Epic Games/PoseWrangler.ini*
