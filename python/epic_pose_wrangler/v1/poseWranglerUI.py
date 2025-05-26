@@ -4,9 +4,11 @@
 import os
 
 # External
-from PySide2 import QtWidgets
-from PySide2 import QtCore
-from PySide2 import QtUiTools
+try:
+    from PySide6 import QtWidgets, QtCore, QtUiTools
+except ImportError:
+    from PySide2 import QtWidgets, QtCore, QtUiTools
+    
 import maya.cmds as cmds
 import maya.OpenMaya as OpenMaya
 from maya.app.general.mayaMixin import MayaQWidgetDockableMixin

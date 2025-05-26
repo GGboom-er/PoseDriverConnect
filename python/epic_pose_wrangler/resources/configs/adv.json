@@ -1,6 +1,6 @@
 {
   "retargeting": {
-    "transform_mapping": {},
+    "transform_mapping": {"Root_M": "Root_M"},
     "import": {
       "source": 1,
       "target": 0

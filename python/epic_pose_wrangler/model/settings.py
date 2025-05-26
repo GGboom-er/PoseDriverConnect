@@ -4,7 +4,10 @@
 import os
 
 # External
-from PySide2 import QtCore
+try:
+    from PySide6 import QtCore
+except ImportError:
+    from PySide2 import QtCore
 
 # Internal
 from epic_pose_wrangler.log import LOG

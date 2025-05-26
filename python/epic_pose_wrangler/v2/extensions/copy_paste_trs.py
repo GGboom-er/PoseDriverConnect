@@ -19,7 +19,10 @@ class BakePosesToTimeline(base_extension.PoseWranglerExtension):
     def view(self):
         if self._view is not None:
             return self._view
-        from PySide2 import QtWidgets
+        try:
+            from PySide6 import QtWidgets
+        except ImportError:
+            from PySide2 import QtWidgets
 
         self._view = QtWidgets.QWidget()
         layout = QtWidgets.QVBoxLayout()

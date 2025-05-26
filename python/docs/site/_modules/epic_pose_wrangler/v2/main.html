@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="../../../">
+<html class="no-js" lang="en" data-content_root="">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+    <!-- Generated with Sphinx 6.1.3 and Furo 2023.09.10 -->
         <title>epic_pose_wrangler.v2.main - Pose Driver Connect Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=369552022d0b975c8e74270ce6eabe0fb7978f24" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -221,9 +221,7 @@
 <span class="kn">from</span> <span class="nn">epic_pose_wrangler.v2</span> <span class="kn">import</span> <span class="n">extensions</span>
 
 
-<div class="viewcode-block" id="UERBFAPI">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI">[docs]</a>
-<span class="k">class</span> <span class="nc">UERBFAPI</span><span class="p">(</span><span class="n">RBFAPI</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI">[docs]</a><span class="k">class</span> <span class="nc">UERBFAPI</span><span class="p">(</span><span class="n">RBFAPI</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main entry point for interacting with the UERBFSolverNode and UEPoseBlenderNode</span>
 
@@ -231,7 +229,7 @@
 <span class="sd">    &gt;&gt;&gt; rbf_api = main.UERBFAPI(view=False)</span>
 <span class="sd">    &gt;&gt;&gt; rbf_api.create_rbf_solver(solver_name=&quot;ExampleSolver&quot;, drivers=[&#39;leg_l&#39;])</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">VERSION</span> <span class="o">=</span> <span class="s2">&quot;2.4.0&quot;</span>
+    <span class="n">VERSION</span> <span class="o">=</span> <span class="s2">&quot;2.5.0&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">UERBFAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="n">view</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">)</span>
@@ -346,9 +344,7 @@
 
     <span class="c1"># ================================================ Solvers ======================================================= #</span>
 
-<div class="viewcode-block" id="UERBFAPI.create_rbf_solver">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_rbf_solver">[docs]</a>
-    <span class="k">def</span> <span class="nf">create_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver_name</span><span class="p">,</span> <span class="n">drivers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.create_rbf_solver"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_rbf_solver">[docs]</a>    <span class="k">def</span> <span class="nf">create_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver_name</span><span class="p">,</span> <span class="n">drivers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create an rbf solver node with the given name and the specified driver transforms</span>
 
@@ -377,10 +373,7 @@
         <span class="c1"># Return the new solver</span>
         <span class="k">return</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.delete_rbf_solver">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_rbf_solver">[docs]</a>
-    <span class="k">def</span> <span class="nf">delete_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.delete_rbf_solver"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_rbf_solver">[docs]</a>    <span class="k">def</span> <span class="nf">delete_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete the specified solver</span>
 
@@ -398,10 +391,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_solver</span> <span class="o">==</span> <span class="n">solver</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_current_solver</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.edit_solver">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.edit_solver">[docs]</a>
-    <span class="k">def</span> <span class="nf">edit_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.edit_solver"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.edit_solver">[docs]</a>    <span class="k">def</span> <span class="nf">edit_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Edit or finish editing the specified solver. Enables pose creation/driven node changes via the ui</span>
 
@@ -424,10 +414,7 @@
         <span class="k">if</span> <span class="n">edit</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">EditSolverContextManager</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.mirror_rbf_solver">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mirror_rbf_solver">[docs]</a>
-    <span class="k">def</span> <span class="nf">mirror_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mirror_rotation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">mirror_translation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.mirror_rbf_solver"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mirror_rbf_solver">[docs]</a>    <span class="k">def</span> <span class="nf">mirror_rbf_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mirror_rotation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">mirror_translation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Mirror the current solver</span>
 
@@ -456,10 +443,7 @@
         <span class="c1"># Return the new solver</span>
         <span class="k">return</span> <span class="n">mirrored_solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.get_rbf_solver_by_name">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_rbf_solver_by_name">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_rbf_solver_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver_name</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.get_rbf_solver_by_name"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_rbf_solver_by_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_rbf_solver_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver_name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Searches the scene for an rbf solver with the given name. Case insensitive</span>
 
@@ -472,12 +456,9 @@
             <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">solver</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">solver_name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                 <span class="k">return</span> <span class="n">solver</span></div>
 
-
     <span class="c1"># ================================================ Drivers ======================================================= #</span>
 
-<div class="viewcode-block" id="UERBFAPI.add_drivers">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_drivers">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_drivers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drivers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.add_drivers"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_drivers">[docs]</a>    <span class="k">def</span> <span class="nf">add_drivers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drivers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add the specified drivers to the specified solver</span>
 
@@ -502,10 +483,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.remove_drivers">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.remove_drivers">[docs]</a>
-    <span class="k">def</span> <span class="nf">remove_drivers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drivers</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.remove_drivers"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.remove_drivers">[docs]</a>    <span class="k">def</span> <span class="nf">remove_drivers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drivers</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove the specified drivers from the specified solver</span>
 
@@ -521,12 +499,9 @@
         <span class="c1"># Have to re-wrap solver due to a bug with targets array indexing</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">RBFNode</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">solver</span><span class="p">))</span></div>
 
-
     <span class="c1"># ================================================ Driven ======================================================== #</span>
 
-<div class="viewcode-block" id="UERBFAPI.add_driven_transforms">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_driven_transforms">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_driven_transforms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driven_nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.add_driven_transforms"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_driven_transforms">[docs]</a>    <span class="k">def</span> <span class="nf">add_driven_transforms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driven_nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add driven transforms to the specified solver</span>
 
@@ -543,10 +518,7 @@
         <span class="c1"># Update the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.remove_driven">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.remove_driven">[docs]</a>
-    <span class="k">def</span> <span class="nf">remove_driven</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driven_nodes</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.remove_driven"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.remove_driven">[docs]</a>    <span class="k">def</span> <span class="nf">remove_driven</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">driven_nodes</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove driven transforms from the specified solver</span>
 
@@ -561,12 +533,9 @@
         <span class="c1"># Update the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
     <span class="c1"># ============================================== Blendshapes ===================================================== #</span>
 
-<div class="viewcode-block" id="UERBFAPI.add_blendshape">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_blendshape">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">,</span> <span class="n">base_mesh</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.add_blendshape"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.add_blendshape">[docs]</a>    <span class="k">def</span> <span class="nf">add_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">,</span> <span class="n">base_mesh</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add an existing blendshape for the current pose</span>
 
@@ -585,10 +554,7 @@
         <span class="n">solver</span><span class="o">.</span><span class="n">add_existing_blendshape</span><span class="p">(</span><span class="n">pose_name</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">,</span> <span class="n">base_mesh</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.create_blendshape">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_blendshape">[docs]</a>
-    <span class="k">def</span> <span class="nf">create_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mesh_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.create_blendshape"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_blendshape">[docs]</a>    <span class="k">def</span> <span class="nf">create_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mesh_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a new blendshape for the given pose and mesh</span>
 
@@ -616,10 +582,7 @@
         <span class="c1"># Return the name of the new blendshape mesh</span>
         <span class="k">return</span> <span class="n">blendshape_mesh_name</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.delete_blendshape">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_blendshape">[docs]</a>
-    <span class="k">def</span> <span class="nf">delete_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.delete_blendshape"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_blendshape">[docs]</a>    <span class="k">def</span> <span class="nf">delete_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete the blendshape associated with the specified pose</span>
 
@@ -635,10 +598,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.edit_blendshape">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.edit_blendshape">[docs]</a>
-    <span class="k">def</span> <span class="nf">edit_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.edit_blendshape"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.edit_blendshape">[docs]</a>    <span class="k">def</span> <span class="nf">edit_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Edit or finish editing the blendshape associated with the specified pose name</span>
 
@@ -659,10 +619,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">edit_blendshape</span><span class="p">(</span><span class="n">pose_name</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="n">edit</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.isolate_blendshape">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.isolate_blendshape">[docs]</a>
-    <span class="k">def</span> <span class="nf">isolate_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.isolate_blendshape"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.isolate_blendshape">[docs]</a>    <span class="k">def</span> <span class="nf">isolate_blendshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Isolate the blendshape associated with the specified pose name, disabling all other blendshapes.</span>
 
@@ -680,12 +637,9 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
     <span class="c1"># ================================================= Poses ======================================================== #</span>
 
-<div class="viewcode-block" id="UERBFAPI.create_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">create_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.create_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.create_pose">[docs]</a>    <span class="k">def</span> <span class="nf">create_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a new pose for the specified solver</span>
 
@@ -701,10 +655,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.delete_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">delete_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.delete_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.delete_pose">[docs]</a>    <span class="k">def</span> <span class="nf">delete_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a pose from the given solver</span>
 
@@ -720,10 +671,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.go_to_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.go_to_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">go_to_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.go_to_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.go_to_pose">[docs]</a>    <span class="k">def</span> <span class="nf">go_to_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Move the driver/driven transforms to the given pose</span>
 
@@ -737,10 +685,7 @@
         <span class="c1"># Go to the pose</span>
         <span class="n">solver</span><span class="o">.</span><span class="n">go_to_pose</span><span class="p">(</span><span class="n">pose_name</span><span class="o">=</span><span class="n">pose_name</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.mirror_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mirror_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">mirror_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mirror_rotation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">mirror_translation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.mirror_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mirror_pose">[docs]</a>    <span class="k">def</span> <span class="nf">mirror_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mirror_rotation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">mirror_translation_axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Mirror a pose to the mirror of the current solver</span>
 
@@ -765,10 +710,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.mute_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mute_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">mute_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.mute_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.mute_pose">[docs]</a>    <span class="k">def</span> <span class="nf">mute_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">mute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Mute or unmute the specified pose, removing all influences of the pose from the solver.</span>
 <span class="sd">        NOTE: This will affect the solver radius if automatic radius is enabled.</span>
@@ -787,10 +729,7 @@
         <span class="c1"># Set the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.rename_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.rename_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">rename_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">new_pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.rename_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.rename_pose">[docs]</a>    <span class="k">def</span> <span class="nf">rename_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">new_pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Rename a pose on the given solver</span>
 
@@ -810,10 +749,7 @@
         <span class="c1"># Update the current solver</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.update_pose">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.update_pose">[docs]</a>
-    <span class="k">def</span> <span class="nf">update_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.update_pose"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.update_pose">[docs]</a>    <span class="k">def</span> <span class="nf">update_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose_name</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Update the pose for the given solver</span>
 
@@ -830,12 +766,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span> <span class="o">=</span> <span class="n">solver</span></div>
 
-
     <span class="c1"># ================================================== IO ========================================================== #</span>
 
-<div class="viewcode-block" id="UERBFAPI.deserialize_from_file">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.deserialize_from_file">[docs]</a>
-    <span class="k">def</span> <span class="nf">deserialize_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">solver_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.deserialize_from_file"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.deserialize_from_file">[docs]</a>    <span class="k">def</span> <span class="nf">deserialize_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">solver_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Deserialize solvers from a specific file.</span>
 
@@ -860,10 +793,7 @@
             <span class="p">)</span>
         <span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.serialize_to_file">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.serialize_to_file">[docs]</a>
-    <span class="k">def</span> <span class="nf">serialize_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.serialize_to_file"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.serialize_to_file">[docs]</a>    <span class="k">def</span> <span class="nf">serialize_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Serialize the specified solvers to a file</span>
 
@@ -889,10 +819,7 @@
                 <span class="p">)</span>
             <span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.deserialize">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.deserialize">[docs]</a>
-    <span class="k">def</span> <span class="nf">deserialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solver_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.deserialize"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.deserialize">[docs]</a>    <span class="k">def</span> <span class="nf">deserialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">solver_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Deserialize and load the solvers from the data specified</span>
 
@@ -908,10 +835,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.serialize">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.serialize">[docs]</a>
-    <span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solvers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.serialize"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.serialize">[docs]</a>    <span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solvers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Serialize the specified solvers</span>
 
@@ -924,10 +848,7 @@
         <span class="n">serializer</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">SERIALIZERS</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">serializer</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">solvers</span><span class="o">=</span><span class="n">solvers</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.load">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.load">[docs]</a>
-    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.load"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Load the default pose wrangler settings</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -938,12 +859,9 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_load_view</span><span class="p">()</span></div>
 
-
     <span class="c1"># =============================================== Utilities ====================================================== #</span>
 
-<div class="viewcode-block" id="UERBFAPI.get_context">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_context">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.get_context"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_context">[docs]</a>    <span class="k">def</span> <span class="nf">get_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the current solver context</span>
 
@@ -952,10 +870,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">context</span><span class="o">.</span><span class="n">PoseWranglerContext</span><span class="p">(</span><span class="n">current_solver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_solver</span><span class="p">,</span> <span class="n">solvers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rbf_solvers</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.get_ui_context">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_ui_context">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_ui_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.get_ui_context"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_ui_context">[docs]</a>    <span class="k">def</span> <span class="nf">get_ui_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        If the ui is available, return the ui context</span>
 
@@ -965,10 +880,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">get_context</span><span class="p">()</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.get_extension_by_type">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_extension_by_type">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_extension_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_ref</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.get_extension_by_type"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_extension_by_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_extension_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_ref</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get a reference to one of the loaded extensions from a class type</span>
 
@@ -982,7 +894,6 @@
             <span class="k">return</span>
         <span class="k">return</span> <span class="n">extensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
 
-
     <span class="nd">@decorators</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="s2">&quot;set_mirror_mapping(path) has been deprecated in favour of the set_config_path. &quot;</span>
                            <span class="s2">&quot;Please see the documentation for further information on the upgrade process.&quot;</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">set_mirror_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -994,9 +905,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_config_path</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
 
-<div class="viewcode-block" id="UERBFAPI.set_config_path">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.set_config_path">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_config_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.set_config_path"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.set_config_path">[docs]</a>    <span class="k">def</span> <span class="nf">set_config_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the skeleton config from a file</span>
 
@@ -1030,10 +939,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">update_skeleton_config_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">file_path</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="UERBFAPI.get_solver_edit_status">
-<a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_solver_edit_status">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_solver_edit_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="p">):</span>
+<div class="viewcode-block" id="UERBFAPI.get_solver_edit_status"><a class="viewcode-back" href="../../../api.html#epic_pose_wrangler.v2.main.UERBFAPI.get_solver_edit_status">[docs]</a>    <span class="k">def</span> <span class="nf">get_solver_edit_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">solver</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if the current solver is in &#39;Edit&#39; mode</span>
 
@@ -1045,7 +951,6 @@
         <span class="c1"># Get the solver if it hasn&#39;t been specified</span>
         <span class="n">solver</span> <span class="o">=</span> <span class="n">solver</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_solver</span>
         <span class="k">return</span> <span class="n">solver</span><span class="o">.</span><span class="n">get_solver_edit_status</span><span class="p">()</span></div>
-
 
     <span class="k">def</span> <span class="nf">_get_valid_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ui_context</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1176,11 +1081,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_view</span><span class="o">.</span><span class="n">event_set_skeleton_config</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_config_path</span><span class="p">)</span></div>
 
 
-
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">ctypes</span>
 
-    <span class="kn">from</span> <span class="nn">PySide2</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">PySide2</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
 
     <span class="n">myappid</span> <span class="o">=</span> <span class="s1">&#39;EpicGames.PoseWrangler&#39;</span>
     <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">shell32</span><span class="o">.</span><span class="n">SetCurrentProcessExplicitAppUserModelID</span><span class="p">(</span><span class="n">myappid</span><span class="p">)</span>
@@ -1219,9 +1126,9 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=c3c8ae58"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
     </body>
 </html>

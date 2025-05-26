@@ -17,7 +17,6 @@ class ZeroDefaultPoseAction(base_action.BaseAction):
         return bool(ui_context.current_solvers)
 
     def execute(self, ui_context=None, solver=None, **kwargs):
-        from PySide2 import QtWidgets
         if not ui_context:
             ui_context = self.api.get_ui_context()
         if ui_context:

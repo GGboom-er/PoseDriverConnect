@@ -9,9 +9,10 @@ from functools import partial
 # External
 from maya.app.general.mayaMixin import MayaQWidgetDockableMixin
 
-from PySide2 import QtWidgets, QtGui
-from PySide2 import QtCore
-from PySide2 import QtUiTools
+try:
+    from PySide6 import QtWidgets, QtCore, QtUiTools, QtGui
+except ImportError:
+    from PySide2 import QtWidgets, QtCore, QtUiTools, QtGui
 
 # Internal
 from epic_pose_wrangler.v2.view import ui_context
@@ -830,7 +831,8 @@ class PoseWranglerWindow(MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
             # Get the selected solver
             solver = self._get_selected_solvers()[-1]
             # Go to pose
-            self.event_go_to_pose.emit(selected_pose, solver)
+            if solver.has_pose(selected_pose):
+                self.event_go_to_pose.emit(selected_pose, solver)
 
     def _rename_pose(self):
         """

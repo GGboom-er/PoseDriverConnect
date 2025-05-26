@@ -33,6 +33,14 @@ Community here: https://dev.epicgames.com/community/learning/tutorials/r04p/unre
 
 Release History
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2.5.0:
+++++++++++++++++
+
+    Maya 2025 Support:
+        - Included plugins for linux/windows
+        - PySide6 support
+
+
 2.4.0:
 ++++++++++++++++
 

@@ -168,8 +168,7 @@ def fbx_export(
     cmds.FBXExportGenerateLog('-v', generate_log)
     cmds.FBXExportUseSceneName('-v', use_scene_name)
     cmds.FBXExportInAscii('-v', in_ascii)
-    print  'aa'
-    #cmds.FBXExportFileVersion('-v', 'FBX202000')
+    cmds.FBXExportFileVersion('-v', file_version)
     cmds.FBXExportUpAxis(up_axis)
 
     cmds.FBXExport('-s', '-f', filepath)

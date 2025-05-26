@@ -6,7 +6,11 @@ import math
 import json
 
 # External
-from PySide2 import QtWidgets
+try:
+    from PySide6 import QtWidgets
+except ImportError:
+    from PySide2 import QtWidgets
+
 import maya.cmds as cmds
 import maya.api.OpenMaya as api
 

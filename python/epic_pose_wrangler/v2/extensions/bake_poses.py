@@ -19,7 +19,11 @@ class BakePosesToTimeline(base_extension.PoseWranglerExtension):
     def view(self):
         if self._view is not None:
             return self._view
-        from PySide2 import QtWidgets
+        try:
+            from PySide6 import QtWidgets
+        except ImportError:
+            from PySide2 import QtWidgets
+
         self._view = QtWidgets.QPushButton("Bake Poses To Timeline")
         self._view.clicked.connect(partial(self.execute, None))
         return self._view
@@ -55,7 +59,11 @@ def bake_poses_to_timeline(start_frame=0, anim_layer=None, solver=None, view=Fal
         cmds.autoKeyframe(e=1, st=0)
         # If we are running with the view, provide a popup
         if view:
-            from PySide2 import QtWidgets
+            try:
+                from PySide6 import QtWidgets
+            except ImportError:
+                from PySide2 import QtWidgets
+
             msg = ("This will bake the poses to the timeline, change your time range, "
                    "and delete inputs on driving and driven transforms.\n"
                    "Do you want this to happen?")

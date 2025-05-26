@@ -14,7 +14,10 @@ class ExportSelectedAction(base_action.BaseAction):
         return bool(ui_context.current_solvers)
 
     def execute(self, ui_context=None, **kwargs):
-        from PySide2 import QtWidgets
+        try:
+            from PySide6 import QtWidgets
+        except ImportError:
+            from PySide2 import QtWidgets
 
         if not ui_context:
             ui_context = self.api.get_ui_context()
@@ -40,7 +43,10 @@ class ExportAllAction(base_action.BaseAction):
         return bool(ui_context.current_solvers)
 
     def execute(self, ui_context=None, **kwargs):
-        from PySide2 import QtWidgets
+        try:
+            from PySide6 import QtWidgets
+        except ImportError:
+            from PySide2 import QtWidgets
 
         if not ui_context:
             ui_context = self.api.get_ui_context()
@@ -63,7 +69,10 @@ class ImportFromFileAction(base_action.BaseAction):
         return bool(ui_context.current_solvers)
 
     def execute(self, ui_context=None, **kwargs):
-        from PySide2 import QtWidgets
+        try:
+            from PySide6 import QtWidgets
+        except ImportError:
+            from PySide2 import QtWidgets
 
         if not ui_context:
             ui_context = self.api.get_ui_context()

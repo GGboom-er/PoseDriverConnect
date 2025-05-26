@@ -1,7 +1,10 @@
 # Copyright Epic Games, Inc. All Rights Reserved.
 
 # External
-from PySide2 import QtWidgets, QtCore
+try:
+    from PySide6 import QtWidgets, QtCore
+except ImportError:
+    from PySide2 import QtWidgets, QtCore
 
 
 class PoseExporterView(QtWidgets.QWidget):

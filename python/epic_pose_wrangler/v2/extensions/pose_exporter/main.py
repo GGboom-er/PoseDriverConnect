@@ -63,14 +63,13 @@ class PoseExporter(base_extension.PoseWranglerExtension):
         cmds.file(
             maya_file, force=True, type='mayaAscii', exportAll=True
         )
-        print ('++++++++++++++++++++++++++++++++++++++++++')
+
         self.api.serialize_to_file(file_path=json_file, solvers=solvers, delta=delta)
+
         process_file = os.path.join(os.path.dirname(__file__), 'batch.py')
         env = dict(os.environ)
         env['PYTHONPATH'] += ";{}".format(';'.join(sys.path))
-        print ('++++++++++++++++++++++++++++++++++++++++++')
-        print (process_file)
-        print (";{}".format(';'.join(sys.path)))
+
         thread_pool = ThreadPool(export_instances)
 
         for solver in solvers:
@@ -84,7 +83,6 @@ class PoseExporter(base_extension.PoseWranglerExtension):
                     continue
 
             solver_name = str(solver)
-            print (process_file, solver_name, maya_file, export_directory, up_axis, env)
             thread_pool.apply_async(
                 _execute_process,
                 (process_file, solver_name, maya_file, export_directory, up_axis, env)

@@ -215,8 +215,8 @@ class RBFNode(object):
         """
         data = OrderedDict()
         data['solver_name'] = str(self)
-        data['drivers'] = sorted(self.drivers())
-        data['driven_transforms'] = sorted(self.driven_nodes(pose_blender.UEPoseBlenderNode.node_type))
+        data['drivers'] = self.drivers()
+        data['driven_transforms'] = self.driven_nodes(pose_blender.UEPoseBlenderNode.node_type)
         data['controllers'] = self.controllers()
         data['poses'] = self.poses()
         data['driven_attrs'] = self.driven_attributes()
@@ -1614,10 +1614,9 @@ class RBFNode(object):
 
             from_attr = "{self}.targets[{pose_index}].targetName".format(self=self, pose_index=pose_index)
             to_attr = "{blendshape}.poseName".format(blendshape=blendshape_mesh)
-            try:
-                cmds.disconnectAttr(from_attr, to_attr)
-            except:
-                cmds.disconnectAttr(from_attr, "{blendshape}_TEMP.poseName".format(blendshape=blendshape_mesh))
+
+            cmds.disconnectAttr(from_attr, to_attr)
+
             # Delete the mesh
             if cmds.objExists(blendshape_mesh) and delete_mesh:
                 cmds.select(blendshape_mesh, replace=True)
