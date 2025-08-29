@@ -134,6 +134,7 @@ class Serializer(base_serializer.Serializer):
 
             for solver_name, solver_data in rbf_data.items():
                 # Get the current drivers matrices from its current object space position as an MMatrix for ease of use
+                
                 current_drivers = [om.MMatrix(cmds.xform(d, query=True, matrix=True, objectSpace=True)) for d in
                                    solver_data['drivers']]
 

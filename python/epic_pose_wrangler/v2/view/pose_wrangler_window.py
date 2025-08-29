@@ -20,6 +20,7 @@ from epic_pose_wrangler.v2.view.widget import category
 from epic_pose_wrangler.log import LOG
 from epic_pose_wrangler.view import log_widget
 from epic_pose_wrangler.model import settings
+from epic_pose_wrangler.v2.model import maya_utils
 
 
 class PoseWranglerWindow(MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
@@ -137,6 +138,10 @@ class PoseWranglerWindow(MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
         self.win.documentation_ACT.triggered.connect(self._open_documentation)
 
         self.win.use_maya_style_ACT.setChecked(bool(int(settings.SettingsManager.get_setting("UseMayaStyle") or 0)))
+
+        # 切换编辑模式/发布模式
+        self.win.edit_mode_btn.clicked.connect(self._switch_edit_mode)
+        self.win.publish_mode_btn.clicked.connect(self._switch_publish_mode)
 
         # Create a log dock widget
         self._log_widget = log_widget.LogWidget()
@@ -1004,3 +1009,14 @@ class PoseWranglerWindow(MayaQWidgetDockableMixin, QtWidgets.QMainWindow):
         """
         # Execute the action with the data
         action.execute(ui_context=self.get_context())
+
+    # =============================================== 新加功能 ====================================================== #
+    def _switch_edit_mode(self):
+        print('切换到 Edit 模式')
+        cls = maya_utils.SolverSwitch()
+        cls.switch_all_to_fk()
+
+    def _switch_publish_mode(self):
+        print('切换到 Publish 模式')
+        cls = maya_utils.SolverSwitch()
+        cls.switch_all_to_sdk()
